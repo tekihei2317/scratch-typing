@@ -1,0 +1,25 @@
+{
+  "name": "scratch-typing",
+  "version": "1.0.0",
+  "description": "Scratchで作ったタイピングゲームです。",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "extract": "cp typing-game.sb3 typing-game.zip && unzip -u typing-game.zip -d assets && mv assets/project.json . && rm typing-game.zip",
+    "format": "prettier --write project.json",
+    "generate": "npm run extract && npm run format"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tekihei2317/scratch-typing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tekihei2317/scratch-typing/issues"
+  },
+  "homepage": "https://github.com/tekihei2317/scratch-typing#readme",
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  }
+}
