@@ -4,7 +4,7 @@
   "description": "Scratchで作ったタイピングゲームです。",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "extract": "cp typing-game.sb3 typing-game.zip && unzip -u typing-game.zip -d assets && mv assets/project.json . && rm typing-game.zip",
+    "extract": "cp typing-game.sb3 typing-game.zip && unzip -o typing-game.zip -d assets && mv assets/project.json . && rm typing-game.zip",
     "format": "prettier --write project.json",
     "generate": "npm run extract && npm run format"
   },
