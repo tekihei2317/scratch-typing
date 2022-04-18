@@ -4,8 +4,9 @@
       "isStage": true,
       "name": "Stage",
       "variables": {
-        "lu}ZLf.8qwV*Xg#4pH2w": ["へんすう", 0],
-        "^5Oh:61M/Xa4+u3w7mJe": ["もじれつ", "maguro"]
+        "lu}ZLf.8qwV*Xg#4pH2w": ["へんすう", "0"],
+        "^5Oh:61M/Xa4+u3w7mJe": ["もじれつ", "aaabb"],
+        "]R3$7r]Z[XUW},^aP|;a": ["げんざいのいち", 4]
       },
       "lists": {},
       "broadcasts": {},
@@ -54,7 +55,202 @@
       "variables": {},
       "lists": {},
       "broadcasts": {},
-      "blocks": {},
+      "blocks": {
+        "rNk]ZJ$=q^Z3t1CSebj*": {
+          "opcode": "event_whenflagclicked",
+          "next": ";v7kOK=uPIKlXu$Rf5K`",
+          "parent": null,
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": true,
+          "x": 31,
+          "y": 127
+        },
+        ";v7kOK=uPIKlXu$Rf5K`": {
+          "opcode": "data_setvariableto",
+          "next": "nIA`KQO:L$)?wt3k|gE(",
+          "parent": "rNk]ZJ$=q^Z3t1CSebj*",
+          "inputs": { "VALUE": [1, [10, "aaabb"]] },
+          "fields": { "VARIABLE": ["もじれつ", "^5Oh:61M/Xa4+u3w7mJe"] },
+          "shadow": false,
+          "topLevel": false
+        },
+        "-OEn)o}6q}X4y{(q|gG,": {
+          "opcode": "control_forever",
+          "next": null,
+          "parent": "nIA`KQO:L$)?wt3k|gE(",
+          "inputs": { "SUBSTACK": [2, "MD}v=N$=h$:s/nC^fyE!"] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "MD}v=N$=h$:s/nC^fyE!": {
+          "opcode": "control_if",
+          "next": null,
+          "parent": "-OEn)o}6q}X4y{(q|gG,",
+          "inputs": {
+            "CONDITION": [2, "+4HGeT5O[!!s=S%QI-S5"],
+            "SUBSTACK": [2, "@(P+k%`co]JG;W/7u5z="]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "+4HGeT5O[!!s=S%QI-S5": {
+          "opcode": "sensing_keypressed",
+          "next": null,
+          "parent": "MD}v=N$=h$:s/nC^fyE!",
+          "inputs": { "KEY_OPTION": [1, "nj0$;s*C$X){WDll4b_l"] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "nj0$;s*C$X){WDll4b_l": {
+          "opcode": "sensing_keyoptions",
+          "next": null,
+          "parent": "+4HGeT5O[!!s=S%QI-S5",
+          "inputs": {},
+          "fields": { "KEY_OPTION": ["a", null] },
+          "shadow": true,
+          "topLevel": false
+        },
+        "a7c-HTqYr|VUM#3f}UOi": {
+          "opcode": "operator_equals",
+          "next": null,
+          "parent": "@(P+k%`co]JG;W/7u5z=",
+          "inputs": {
+            "OPERAND1": [3, "h~-jcRNot0$_*k7B:7ku", [10, ""]],
+            "OPERAND2": [1, [10, "a"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "h~-jcRNot0$_*k7B:7ku": {
+          "opcode": "operator_letter_of",
+          "next": null,
+          "parent": "a7c-HTqYr|VUM#3f}UOi",
+          "inputs": {
+            "STRING": [
+              3,
+              [12, "もじれつ", "^5Oh:61M/Xa4+u3w7mJe"],
+              [10, "りんご"]
+            ],
+            "LETTER": [
+              3,
+              [12, "げんざいのいち", "]R3$7r]Z[XUW},^aP|;a"],
+              [6, "1"]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "nIA`KQO:L$)?wt3k|gE(": {
+          "opcode": "data_setvariableto",
+          "next": "-OEn)o}6q}X4y{(q|gG,",
+          "parent": ";v7kOK=uPIKlXu$Rf5K`",
+          "inputs": { "VALUE": [1, [10, "1"]] },
+          "fields": { "VARIABLE": ["げんざいのいち", "]R3$7r]Z[XUW},^aP|;a"] },
+          "shadow": false,
+          "topLevel": false
+        },
+        "Ua~v,n!c3cFn^f`F8m0u": {
+          "opcode": "data_changevariableby",
+          "next": "9]%8P9OD]U-9z)|9Es1_",
+          "parent": "@(P+k%`co]JG;W/7u5z=",
+          "inputs": { "VALUE": [1, [4, "1"]] },
+          "fields": { "VARIABLE": ["げんざいのいち", "]R3$7r]Z[XUW},^aP|;a"] },
+          "shadow": false,
+          "topLevel": false
+        },
+        "9]%8P9OD]U-9z)|9Es1_": {
+          "opcode": "sound_play",
+          "next": null,
+          "parent": "Ua~v,n!c3cFn^f`F8m0u",
+          "inputs": { "SOUND_MENU": [1, "*(gS#OzMnsS:(ms)an}."] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "*(gS#OzMnsS:(ms)an}.": {
+          "opcode": "sound_sounds_menu",
+          "next": null,
+          "parent": "9]%8P9OD]U-9z)|9Es1_",
+          "inputs": {},
+          "fields": { "SOUND_MENU": ["Coin", null] },
+          "shadow": true,
+          "topLevel": false
+        },
+        ";D,JyYe)Vt%*I!r0`Q0{": {
+          "opcode": "sound_play",
+          "next": null,
+          "parent": "@(P+k%`co]JG;W/7u5z=",
+          "inputs": { "SOUND_MENU": [1, "T^I~pca-H||:(7F/}Qwq"] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "T^I~pca-H||:(7F/}Qwq": {
+          "opcode": "sound_sounds_menu",
+          "next": null,
+          "parent": ";D,JyYe)Vt%*I!r0`Q0{",
+          "inputs": {},
+          "fields": { "SOUND_MENU": ["Boing", null] },
+          "shadow": true,
+          "topLevel": false
+        },
+        "@(P+k%`co]JG;W/7u5z=": {
+          "opcode": "control_if_else",
+          "next": "BI[T/_G}4N*q:j%+/#W:",
+          "parent": "MD}v=N$=h$:s/nC^fyE!",
+          "inputs": {
+            "CONDITION": [2, "a7c-HTqYr|VUM#3f}UOi"],
+            "SUBSTACK": [2, "Ua~v,n!c3cFn^f`F8m0u"],
+            "SUBSTACK2": [2, ";D,JyYe)Vt%*I!r0`Q0{"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "!pYT#bph?_HuuXx~]B{v": {
+          "opcode": "sensing_keypressed",
+          "next": null,
+          "parent": "q.;IC,K|Z(Jqzd#0@O}-",
+          "inputs": { "KEY_OPTION": [1, "B1Q!]PSe56P:Bs3WtiOE"] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "B1Q!]PSe56P:Bs3WtiOE": {
+          "opcode": "sensing_keyoptions",
+          "next": null,
+          "parent": "!pYT#bph?_HuuXx~]B{v",
+          "inputs": {},
+          "fields": { "KEY_OPTION": ["a", null] },
+          "shadow": true,
+          "topLevel": false
+        },
+        "q.;IC,K|Z(Jqzd#0@O}-": {
+          "opcode": "operator_not",
+          "next": null,
+          "parent": "BI[T/_G}4N*q:j%+/#W:",
+          "inputs": { "OPERAND": [2, "!pYT#bph?_HuuXx~]B{v"] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "BI[T/_G}4N*q:j%+/#W:": {
+          "opcode": "control_wait_until",
+          "next": null,
+          "parent": "@(P+k%`co]JG;W/7u5z=",
+          "inputs": { "CONDITION": [2, "q.;IC,K|Z(Jqzd#0@O}-"] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        }
+      },
       "comments": {},
       "currentCostume": 0,
       "costumes": [
@@ -86,13 +282,29 @@
           "rate": 48000,
           "sampleCount": 40681,
           "md5ext": "83c36d806dc92327b9e7049a565c6bff.wav"
+        },
+        {
+          "assetId": "1f81d88fb419084f4d82ffb859b94ed6",
+          "name": "Coin",
+          "dataFormat": "wav",
+          "rate": 22050,
+          "sampleCount": 4065,
+          "md5ext": "1f81d88fb419084f4d82ffb859b94ed6.wav"
+        },
+        {
+          "assetId": "53a3c2e27d1fb5fdb14aaf0cb41e7889",
+          "name": "Boing",
+          "dataFormat": "wav",
+          "rate": 22050,
+          "sampleCount": 7113,
+          "md5ext": "53a3c2e27d1fb5fdb14aaf0cb41e7889.wav"
         }
       ],
       "volume": 100,
       "layerOrder": 2,
       "visible": true,
-      "x": -133,
-      "y": -66,
+      "x": -145.94117647058823,
+      "y": -88.35294117647058,
       "size": 100,
       "direction": 90,
       "draggable": false,
@@ -101,7 +313,7 @@
     {
       "isStage": false,
       "name": "もじ",
-      "variables": { "^JlyMKkGF$MSw{wpw:(3": ["ループへんすう", 6] },
+      "variables": { "^JlyMKkGF$MSw{wpw:(3": ["ループへんすう", 5] },
       "lists": {},
       "broadcasts": {},
       "blocks": {
@@ -113,8 +325,8 @@
           "fields": {},
           "shadow": false,
           "topLevel": true,
-          "x": 95,
-          "y": 134
+          "x": 94,
+          "y": 133
         },
         "{Y#PKVqAE$)mS~*S*2?;": {
           "opcode": "procedures_definition",
@@ -125,7 +337,7 @@
           "shadow": false,
           "topLevel": true,
           "x": 379,
-          "y": 153
+          "y": 152
         },
         "SF%.:Igu@S/Io%6xg$=v": {
           "opcode": "procedures_prototype",
@@ -147,26 +359,17 @@
         },
         "g}58FZ#o?z}wy!p_j0Ma": {
           "opcode": "pen_clear",
-          "next": "zDJAVA-%NrOmy3dwy.zw",
+          "next": "k,`_Y],9R!/dMp?3fmir",
           "parent": "{Y#PKVqAE$)mS~*S*2?;",
           "inputs": {},
           "fields": {},
           "shadow": false,
           "topLevel": false
         },
-        "zDJAVA-%NrOmy3dwy.zw": {
-          "opcode": "data_setvariableto",
-          "next": "k,`_Y],9R!/dMp?3fmir",
-          "parent": "g}58FZ#o?z}wy!p_j0Ma",
-          "inputs": { "VALUE": [1, [10, "maguro"]] },
-          "fields": { "VARIABLE": ["もじれつ", "^5Oh:61M/Xa4+u3w7mJe"] },
-          "shadow": false,
-          "topLevel": false
-        },
         "k,`_Y],9R!/dMp?3fmir": {
           "opcode": "data_setvariableto",
           "next": "T[BpKpsh,WFxoyv]Y-J`",
-          "parent": "zDJAVA-%NrOmy3dwy.zw",
+          "parent": "g}58FZ#o?z}wy!p_j0Ma",
           "inputs": { "VALUE": [1, [10, "0"]] },
           "fields": { "VARIABLE": ["ループへんすう", "^JlyMKkGF$MSw{wpw:(3"] },
           "shadow": false,
@@ -302,7 +505,7 @@
         }
       },
       "comments": {},
-      "currentCostume": 14,
+      "currentCostume": 1,
       "costumes": [
         {
           "assetId": "2482d772def7362eb520841a2564b6b7",
@@ -569,7 +772,7 @@
       "volume": 100,
       "layerOrder": 1,
       "visible": false,
-      "x": 100,
+      "x": 75,
       "y": 20,
       "size": 30,
       "direction": 90,
@@ -600,7 +803,7 @@
       "opcode": "data_variable",
       "params": { "VARIABLE": "もじれつ" },
       "spriteName": null,
-      "value": "maguro",
+      "value": "aaabb",
       "width": 0,
       "height": 0,
       "x": 5,
@@ -616,11 +819,27 @@
       "opcode": "data_variable",
       "params": { "VARIABLE": "ループへんすう" },
       "spriteName": "もじ",
-      "value": 6,
+      "value": 5,
       "width": 0,
       "height": 0,
       "x": 5,
       "y": 36,
+      "visible": true,
+      "sliderMin": 0,
+      "sliderMax": 100,
+      "isDiscrete": true
+    },
+    {
+      "id": "]R3$7r]Z[XUW},^aP|;a",
+      "mode": "default",
+      "opcode": "data_variable",
+      "params": { "VARIABLE": "げんざいのいち" },
+      "spriteName": null,
+      "value": 4,
+      "width": 0,
+      "height": 0,
+      "x": 5,
+      "y": 67,
       "visible": true,
       "sliderMin": 0,
       "sliderMax": 100,
