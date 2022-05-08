@@ -5,7 +5,7 @@
       "name": "Stage",
       "variables": {
         "lu}ZLf.8qwV*Xg#4pH2w": ["へんすう", "0"],
-        "^5Oh:61M/Xa4+u3w7mJe": ["もじれつ", "budou"],
+        "^5Oh:61M/Xa4+u3w7mJe": ["もじれつ", "gorira"],
         "]R3$7r]Z[XUW},^aP|;a": ["げんざいのいち", "1"],
         "$G8ctKHsXteyRa4[K;xh": ["アルファベット", "abcdefghijklmnopqrstuvwxyz"]
       },
@@ -18,7 +18,8 @@
       "broadcasts": {
         ":V`WuhQ/2G!z4fCQK)M?": "もじれつのひょうじ",
         "eywQVfye#sDpSz=[gci$": "てきにこうげき",
-        "ZKVDrQAoHl@1=++8M78o": "プレイヤーにこうげき"
+        "ZKVDrQAoHl@1=++8M78o": "プレイヤーにこうげき",
+        "a@VBIu3Uchwhu,,ids,l": "ゲームクリア"
       },
       "blocks": {},
       "comments": {},
@@ -64,9 +65,9 @@
       "isStage": false,
       "name": "ねこ",
       "variables": {
-        "QYqSP}u~8MHvV6)^,wJN": ["アルファベットのいち", 7],
-        ",!BgKQ9C.jdnx[TF?^{/": ["もじ", "g"],
-        "Nk#`,.,l`]_:bAVoHUTY": ["たいりょく", -20]
+        "QYqSP}u~8MHvV6)^,wJN": ["アルファベットのいち", 15],
+        ",!BgKQ9C.jdnx[TF?^{/": ["もじ", "o"],
+        "Nk#`,.,l`]_:bAVoHUTY": ["たいりょく", 80]
       },
       "lists": {},
       "broadcasts": {},
@@ -665,8 +666,8 @@
           },
           "shadow": false,
           "topLevel": true,
-          "x": -407,
-          "y": 75
+          "x": -466,
+          "y": 81
         },
         "RQ/LM#X{A_[*Uu}fC#KO": {
           "opcode": "data_changevariableby",
@@ -700,6 +701,73 @@
           "next": null,
           "parent": "RQ/LM#X{A_[*Uu}fC#KO",
           "inputs": { "MESSAGE": [1, [10, "いたい！"]], "SECS": [1, [4, "1"]] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "vG3tEOGHBfxgBB9:%Dp)": {
+          "opcode": "event_whenbroadcastreceived",
+          "next": "Q-Se9gB51_uN#MSf.ZCE",
+          "parent": null,
+          "inputs": {},
+          "fields": {
+            "BROADCAST_OPTION": ["ゲームクリア", "a@VBIu3Uchwhu,,ids,l"]
+          },
+          "shadow": false,
+          "topLevel": true,
+          "x": -464,
+          "y": 359
+        },
+        "Q-Se9gB51_uN#MSf.ZCE": {
+          "opcode": "looks_say",
+          "next": "%b;C6is94=Ex|DUfZk!p",
+          "parent": "vG3tEOGHBfxgBB9:%Dp)",
+          "inputs": { "MESSAGE": [1, [10, "やったー！"]] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "%b;C6is94=Ex|DUfZk!p": {
+          "opcode": "control_forever",
+          "next": null,
+          "parent": "Q-Se9gB51_uN#MSf.ZCE",
+          "inputs": { "SUBSTACK": [2, "ijB,=QG.|Vw90$y8]%16"] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "ijB,=QG.|Vw90$y8]%16": {
+          "opcode": "motion_changeyby",
+          "next": "%`z=$aaXaZku~~v%+mXI",
+          "parent": "%b;C6is94=Ex|DUfZk!p",
+          "inputs": { "DY": [1, [4, "15"]] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "%`z=$aaXaZku~~v%+mXI": {
+          "opcode": "control_wait",
+          "next": "Ju=S8`?q;%/KdFzZ)%cF",
+          "parent": "ijB,=QG.|Vw90$y8]%16",
+          "inputs": { "DURATION": [1, [5, "0.15"]] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "Ju=S8`?q;%/KdFzZ)%cF": {
+          "opcode": "motion_changeyby",
+          "next": "Bi:;aC1VFl?Al5_unuoU",
+          "parent": "%`z=$aaXaZku~~v%+mXI",
+          "inputs": { "DY": [1, [4, "-15"]] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "Bi:;aC1VFl?Al5_unuoU": {
+          "opcode": "control_wait",
+          "next": null,
+          "parent": "Ju=S8`?q;%/KdFzZ)%cF",
+          "inputs": { "DURATION": [1, [5, "0.15"]] },
           "fields": {},
           "shadow": false,
           "topLevel": false
@@ -783,7 +851,7 @@
     {
       "isStage": false,
       "name": "もじ",
-      "variables": { "^JlyMKkGF$MSw{wpw:(3": ["ループへんすう", 5] },
+      "variables": { "^JlyMKkGF$MSw{wpw:(3": ["ループへんすう", 6] },
       "lists": {},
       "broadcasts": {},
       "blocks": {
@@ -972,8 +1040,8 @@
           },
           "shadow": false,
           "topLevel": true,
-          "x": -2,
-          "y": 133
+          "x": -75,
+          "y": 134
         },
         "+@ctsBZ/zfBzR~*d[vjx": {
           "opcode": "control_if_else",
@@ -1025,10 +1093,32 @@
           "fields": { "EFFECT": ["GHOST", null] },
           "shadow": false,
           "topLevel": false
+        },
+        "=hh!bdjPF`XQ_wk$E1Jw": {
+          "opcode": "event_whenbroadcastreceived",
+          "next": "Y:U6]qzu.zA!`E3~C)5d",
+          "parent": null,
+          "inputs": {},
+          "fields": {
+            "BROADCAST_OPTION": ["ゲームクリア", "a@VBIu3Uchwhu,,ids,l"]
+          },
+          "shadow": false,
+          "topLevel": true,
+          "x": -74,
+          "y": 308
+        },
+        "Y:U6]qzu.zA!`E3~C)5d": {
+          "opcode": "pen_clear",
+          "next": null,
+          "parent": "=hh!bdjPF`XQ_wk$E1Jw",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
         }
       },
       "comments": {},
-      "currentCostume": 20,
+      "currentCostume": 0,
       "costumes": [
         {
           "assetId": "2482d772def7362eb520841a2564b6b7",
@@ -1295,7 +1385,7 @@
       "volume": 100,
       "layerOrder": 1,
       "visible": false,
-      "x": 75,
+      "x": 100,
       "y": 30,
       "size": 30,
       "direction": 90,
@@ -1305,13 +1395,13 @@
     {
       "isStage": false,
       "name": "Dragon",
-      "variables": { "vBHSCNh.A6A3ouXx,L,/": ["たいりょく", -30] },
+      "variables": { "vBHSCNh.A6A3ouXx,L,/": ["たいりょく", "10"] },
       "lists": {},
       "broadcasts": {},
       "blocks": {
         "_-,P`i#:L}f!DvcDU]r|": {
           "opcode": "event_whenflagclicked",
-          "next": "c/8M;?1:Ap[P_Fm[3^+J",
+          "next": "?UMm$X=!4G`0#dXDE9[i",
           "parent": null,
           "inputs": {},
           "fields": {},
@@ -1323,7 +1413,7 @@
         "c/8M;?1:Ap[P_Fm[3^+J": {
           "opcode": "motion_gotoxy",
           "next": "9!+U.b-J/V*f%N4v^A[X",
-          "parent": "_-,P`i#:L}f!DvcDU]r|",
+          "parent": "?UMm$X=!4G`0#dXDE9[i",
           "inputs": { "X": [1, [4, "150"]], "Y": [1, [4, "-80"]] },
           "fields": {},
           "shadow": false,
@@ -1333,7 +1423,7 @@
           "opcode": "data_setvariableto",
           "next": "nFst=:sP2Vz[q6)l%Zc1",
           "parent": "c/8M;?1:Ap[P_Fm[3^+J",
-          "inputs": { "VALUE": [1, [10, "100"]] },
+          "inputs": { "VALUE": [1, [10, "10"]] },
           "fields": { "VARIABLE": ["たいりょく", "vBHSCNh.A6A3ouXx,L,/"] },
           "shadow": false,
           "topLevel": false
@@ -1348,12 +1438,12 @@
           },
           "shadow": false,
           "topLevel": true,
-          "x": 239,
-          "y": 656
+          "x": 244,
+          "y": 675
         },
         "j_OCak)FC8sss?^k00G1": {
           "opcode": "data_changevariableby",
-          "next": null,
+          "next": "VUE~F8u~_zh0[AJ1bst!",
           "parent": "v.7MQ`H9I*kr-lN$G:EN",
           "inputs": { "VALUE": [1, [4, "-10"]] },
           "fields": { "VARIABLE": ["たいりょく", "vBHSCNh.A6A3ouXx,L,/"] },
@@ -1455,6 +1545,63 @@
           "fields": {},
           "shadow": false,
           "topLevel": false
+        },
+        "VUE~F8u~_zh0[AJ1bst!": {
+          "opcode": "control_if",
+          "next": null,
+          "parent": "j_OCak)FC8sss?^k00G1",
+          "inputs": {
+            "CONDITION": [2, "g2]L!v6JUo~a;0;AHPS="],
+            "SUBSTACK": [2, "Ni82/Znig_6p/)oeQ=Ox"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "g2]L!v6JUo~a;0;AHPS=": {
+          "opcode": "operator_equals",
+          "next": null,
+          "parent": "VUE~F8u~_zh0[AJ1bst!",
+          "inputs": {
+            "OPERAND1": [
+              3,
+              [12, "たいりょく", "vBHSCNh.A6A3ouXx,L,/"],
+              [10, ""]
+            ],
+            "OPERAND2": [1, [10, "0"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "Ni82/Znig_6p/)oeQ=Ox": {
+          "opcode": "event_broadcast",
+          "next": "Er;he;*M_Xuo!uz$g2h!",
+          "parent": "VUE~F8u~_zh0[AJ1bst!",
+          "inputs": {
+            "BROADCAST_INPUT": [1, [11, "ゲームクリア", "a@VBIu3Uchwhu,,ids,l"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "Er;he;*M_Xuo!uz$g2h!": {
+          "opcode": "looks_hide",
+          "next": null,
+          "parent": "Ni82/Znig_6p/)oeQ=Ox",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "?UMm$X=!4G`0#dXDE9[i": {
+          "opcode": "looks_show",
+          "next": "c/8M;?1:Ap[P_Fm[3^+J",
+          "parent": "_-,P`i#:L}f!DvcDU]r|",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
         }
       },
       "comments": {},
@@ -1508,6 +1655,90 @@
       "direction": -89.33659013289872,
       "draggable": false,
       "rotationStyle": "left-right"
+    },
+    {
+      "isStage": false,
+      "name": "ゲームクリア",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "j.5XLF}n`FtirTG7k*-:": {
+          "opcode": "event_whenflagclicked",
+          "next": "4WWQL`Md(2RkO{x!;D*Q",
+          "parent": null,
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": true,
+          "x": 67,
+          "y": -96
+        },
+        "4WWQL`Md(2RkO{x!;D*Q": {
+          "opcode": "looks_hide",
+          "next": null,
+          "parent": "j.5XLF}n`FtirTG7k*-:",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "gF{ht%|U025uJoGW+/II": {
+          "opcode": "event_whenbroadcastreceived",
+          "next": "H[^oG$_nBLH7(hl|kF7V",
+          "parent": null,
+          "inputs": {},
+          "fields": {
+            "BROADCAST_OPTION": ["ゲームクリア", "a@VBIu3Uchwhu,,ids,l"]
+          },
+          "shadow": false,
+          "topLevel": true,
+          "x": 65,
+          "y": 69
+        },
+        "H[^oG$_nBLH7(hl|kF7V": {
+          "opcode": "looks_show",
+          "next": null,
+          "parent": "gF{ht%|U025uJoGW+/II",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "48988ba55b1fe1edf00f8dfa11a344dd",
+          "name": "コスチューム1",
+          "bitmapResolution": 1,
+          "md5ext": "48988ba55b1fe1edf00f8dfa11a344dd.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 193.96050497201753,
+          "rotationCenterY": 44.37697047670636
+        }
+      ],
+      "sounds": [
+        {
+          "assetId": "83a9787d4cb6f3b7632b4ddfebf74367",
+          "name": "ポップ",
+          "dataFormat": "wav",
+          "format": "",
+          "rate": 48000,
+          "sampleCount": 1123,
+          "md5ext": "83a9787d4cb6f3b7632b4ddfebf74367.wav"
+        }
+      ],
+      "volume": 100,
+      "layerOrder": 4,
+      "visible": false,
+      "x": 36,
+      "y": 28,
+      "size": 100,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around"
     }
   ],
   "monitors": [
@@ -1642,7 +1873,7 @@
       "opcode": "data_variable",
       "params": { "VARIABLE": "たいりょく" },
       "spriteName": "ねこ",
-      "value": -20,
+      "value": 80,
       "width": 0,
       "height": 0,
       "x": 0,
@@ -1658,7 +1889,7 @@
       "opcode": "data_variable",
       "params": { "VARIABLE": "たいりょく" },
       "spriteName": "Dragon",
-      "value": -30,
+      "value": "10",
       "width": 0,
       "height": 0,
       "x": 303,
