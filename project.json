@@ -25,7 +25,8 @@
         "ZKVDrQAoHl@1=++8M78o": "プレイヤーにこうげき",
         "a@VBIu3Uchwhu,,ids,l": "ゲームクリア",
         ";??EU~nc8qz-@q=+9DnC": "ゲームオーバー",
-        "p+Ymyzbpb5T{a(Y:v0#t": "ゲームスタート"
+        "p+Ymyzbpb5T{a(Y:v0#t": "ゲームスタート",
+        "(HklOmF_mBJ#_ln(uAH*": "カウントダウン"
       },
       "blocks": {},
       "comments": {},
@@ -1076,7 +1077,7 @@
       ],
       "volume": 100,
       "layerOrder": 3,
-      "visible": false,
+      "visible": true,
       "x": -130,
       "y": -110,
       "size": 100,
@@ -1979,7 +1980,7 @@
       ],
       "volume": 100,
       "layerOrder": 2,
-      "visible": false,
+      "visible": true,
       "x": 150,
       "y": -80,
       "size": 90,
@@ -2188,12 +2189,12 @@
           "parent": null,
           "inputs": {},
           "fields": {
-            "BROADCAST_OPTION": ["ゲームスタート", "p+Ymyzbpb5T{a(Y:v0#t"]
+            "BROADCAST_OPTION": ["カウントダウン", "(HklOmF_mBJ#_ln(uAH*"]
           },
           "shadow": false,
           "topLevel": true,
-          "x": 70,
-          "y": 80
+          "x": 69,
+          "y": 79
         },
         "!fEdsb=*h[uaW3hPEi5Z": {
           "opcode": "looks_hide",
@@ -2231,7 +2232,7 @@
       ],
       "volume": 100,
       "layerOrder": 6,
-      "visible": true,
+      "visible": false,
       "x": 8.965757987221423,
       "y": 49.77683812848801,
       "size": 100,
@@ -2254,7 +2255,7 @@
           "fields": {},
           "shadow": false,
           "topLevel": true,
-          "x": 51,
+          "x": 50,
           "y": 92
         },
         "7G4;)qUj(P{1o59U?]7j": {
@@ -2264,7 +2265,7 @@
           "inputs": {
             "BROADCAST_INPUT": [
               1,
-              [11, "ゲームスタート", "p+Ymyzbpb5T{a(Y:v0#t"]
+              [11, "カウントダウン", "(HklOmF_mBJ#_ln(uAH*"]
             ]
           },
           "fields": {},
@@ -2327,9 +2328,215 @@
       ],
       "volume": 100,
       "layerOrder": 7,
-      "visible": true,
+      "visible": false,
       "x": 5,
       "y": -71,
+      "size": 100,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around"
+    },
+    {
+      "isStage": false,
+      "name": "カウント",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "20jOlz#,o|`ANt2?CFDa": {
+          "opcode": "event_whenbroadcastreceived",
+          "next": "AvG6_JgYPx+c){k4)4zo",
+          "parent": null,
+          "inputs": {},
+          "fields": {
+            "BROADCAST_OPTION": ["カウントダウン", "(HklOmF_mBJ#_ln(uAH*"]
+          },
+          "shadow": false,
+          "topLevel": true,
+          "x": -24,
+          "y": 44
+        },
+        "~)sH9)c^5^p_b4(p$:8/": {
+          "opcode": "event_whenflagclicked",
+          "next": "=vc#8vsFG`b?q?61svB_",
+          "parent": null,
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": true,
+          "x": -23,
+          "y": -129
+        },
+        "=vc#8vsFG`b?q?61svB_": {
+          "opcode": "looks_hide",
+          "next": null,
+          "parent": "~)sH9)c^5^p_b4(p$:8/",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "AvG6_JgYPx+c){k4)4zo": {
+          "opcode": "looks_show",
+          "next": "We-45-/HTLH=*R;NKO2[",
+          "parent": "20jOlz#,o|`ANt2?CFDa",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "We-45-/HTLH=*R;NKO2[": {
+          "opcode": "looks_switchcostumeto",
+          "next": "gU,0EsLhUc{62$7|2`R/",
+          "parent": "AvG6_JgYPx+c){k4)4zo",
+          "inputs": { "COSTUME": [1, "]YJRlV#%mZCbYQC.KBDR"] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "]YJRlV#%mZCbYQC.KBDR": {
+          "opcode": "looks_costume",
+          "next": null,
+          "parent": "We-45-/HTLH=*R;NKO2[",
+          "inputs": {},
+          "fields": { "COSTUME": ["3", null] },
+          "shadow": true,
+          "topLevel": false
+        },
+        "gU,0EsLhUc{62$7|2`R/": {
+          "opcode": "control_wait",
+          "next": "?{y#VcFP7JD8*i4g|~1U",
+          "parent": "We-45-/HTLH=*R;NKO2[",
+          "inputs": { "DURATION": [1, [5, "1"]] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "?{y#VcFP7JD8*i4g|~1U": {
+          "opcode": "looks_switchcostumeto",
+          "next": "6xE4}}`)#sB4WZ)H{U8/",
+          "parent": "gU,0EsLhUc{62$7|2`R/",
+          "inputs": { "COSTUME": [1, "NLjxfk%d}UgMZ(VJl@hS"] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "NLjxfk%d}UgMZ(VJl@hS": {
+          "opcode": "looks_costume",
+          "next": null,
+          "parent": "?{y#VcFP7JD8*i4g|~1U",
+          "inputs": {},
+          "fields": { "COSTUME": ["2", null] },
+          "shadow": true,
+          "topLevel": false
+        },
+        "6xE4}}`)#sB4WZ)H{U8/": {
+          "opcode": "control_wait",
+          "next": "!5WJmR~!b#l]6@#/6Z3!",
+          "parent": "?{y#VcFP7JD8*i4g|~1U",
+          "inputs": { "DURATION": [1, [5, "1"]] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "!5WJmR~!b#l]6@#/6Z3!": {
+          "opcode": "looks_switchcostumeto",
+          "next": "-FOaft^N**mQg%#6oAF)",
+          "parent": "6xE4}}`)#sB4WZ)H{U8/",
+          "inputs": { "COSTUME": [1, "YP1PX|N,/Fbfi{h@I;9i"] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "YP1PX|N,/Fbfi{h@I;9i": {
+          "opcode": "looks_costume",
+          "next": null,
+          "parent": "!5WJmR~!b#l]6@#/6Z3!",
+          "inputs": {},
+          "fields": { "COSTUME": ["1", null] },
+          "shadow": true,
+          "topLevel": false
+        },
+        "-FOaft^N**mQg%#6oAF)": {
+          "opcode": "control_wait",
+          "next": "s1U*f3#6wqx%tx[ggBD}",
+          "parent": "!5WJmR~!b#l]6@#/6Z3!",
+          "inputs": { "DURATION": [1, [5, "1"]] },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "s1U*f3#6wqx%tx[ggBD}": {
+          "opcode": "event_broadcast",
+          "next": "ZoR=Yyh%_JOuqbo6LBD}",
+          "parent": "-FOaft^N**mQg%#6oAF)",
+          "inputs": {
+            "BROADCAST_INPUT": [
+              1,
+              [11, "ゲームスタート", "p+Ymyzbpb5T{a(Y:v0#t"]
+            ]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "ZoR=Yyh%_JOuqbo6LBD}": {
+          "opcode": "looks_hide",
+          "next": null,
+          "parent": "s1U*f3#6wqx%tx[ggBD}",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "assetId": "38284f1a10f87ab5d4e0fb34554ae34c",
+          "name": "1",
+          "bitmapResolution": 1,
+          "md5ext": "38284f1a10f87ab5d4e0fb34554ae34c.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 20.475646574517015,
+          "rotationCenterY": 54.81182060310576
+        },
+        {
+          "assetId": "8e04b9cf74a9c6d3b1453625226b6f58",
+          "name": "2",
+          "bitmapResolution": 1,
+          "md5ext": "8e04b9cf74a9c6d3b1453625226b6f58.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 20.475658303222673,
+          "rotationCenterY": 54.018720000000016
+        },
+        {
+          "assetId": "30c5d2dec4ea6f450e8a2d5880a2221c",
+          "name": "3",
+          "bitmapResolution": 1,
+          "md5ext": "30c5d2dec4ea6f450e8a2d5880a2221c.svg",
+          "dataFormat": "svg",
+          "rotationCenterX": 20.475658303222673,
+          "rotationCenterY": 54.018720000000016
+        }
+      ],
+      "sounds": [
+        {
+          "assetId": "83a9787d4cb6f3b7632b4ddfebf74367",
+          "name": "ポップ",
+          "dataFormat": "wav",
+          "format": "",
+          "rate": 48000,
+          "sampleCount": 1123,
+          "md5ext": "83a9787d4cb6f3b7632b4ddfebf74367.wav"
+        }
+      ],
+      "volume": 100,
+      "layerOrder": 8,
+      "visible": false,
+      "x": 8,
+      "y": -19,
       "size": 100,
       "direction": 90,
       "draggable": false,
